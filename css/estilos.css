@@ -1,0 +1,275 @@
+/* Variables */
+:root {
+    --text-color: rgb(46, 46, 46);
+    --article-color: rgb(218, 218, 218);
+    --link-color: #ff1616;
+}
+
+/* Reiniciar estilos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Iframe dentro del contenedor */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin: 0 auto 60px;
+    height: 0;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* container */
+.container{
+    margin: auto;
+    padding: 20px;
+}
+
+@media(min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+    .iframe-container {
+        width: 912px; /* 90% de 960px */
+        padding-top: 486px;
+    }
+}
+
+@media(min-width:1200px){
+    .container{
+        max-width: 1140px;
+    }
+    .iframe-container {
+        width: 912px; /* 80% de 1140px */
+        padding-top: 513px;
+    }
+}
+
+@media(min-width:1550px){
+    .container{
+        max-width: 1450px;
+    }
+    .iframe-container {
+        width: 1015px; /* 70% de 1450px */
+        padding-top: 571px;
+    }
+}
+
+.container--small{
+    max-width: 700px;
+}
+
+/* container extra syles */
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.container p, .container li, .container a{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.container h1, .container h2{
+    font-weight: lighter;
+}
+
+.container h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container h2{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+i.serif{
+    font-family: Georgia, Times, serif;
+    font-weight: normal;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.container p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.container a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.container a:hover{
+    text-decoration: underline;
+}
+
+/* Other default styles */
+span{
+    font-weight: bold;
+}
+
+ul{
+    margin-left: 50px;
+}
+
+li{
+    list-style-type: square;
+}
+
+ul ul li{
+    list-style-type: disc;
+}
+
+figcaption{
+    font-size: 12px;
+    text-align: right;
+    margin-top: 15px;
+}
+
+figure{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+/* Information / Articulo */
+.information a, .information p{
+    margin-top: 3px;
+    line-height: normal;
+}
+
+.container__articulo {
+    text-align: center;
+    background-color: var(--article-color);
+    font-size: 16px;
+}
+
+.container__autor{
+    max-width: 75%;
+    margin: auto;
+    margin-top: 60px;
+    line-height: 25px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.autor__image{
+    border-radius: 50%;
+}
+
+/* Header */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+header ul{
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+header li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+header .active{
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer p{
+    color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/*Tipos de robots */
+.container__cita{
+    background-color: var(--article-color);
+    border-left: 5px solid var(--link-color);
+    padding: 10px 40px 20px 40px;
+    font-family: Georgia, Times, serif;
+    font-weight: normal;
+    margin-bottom: 60px;
+    font-size: 22px;
+}
+
+.cita__autor{
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.robot {
+    display: flex;
+}
+
+.robot img{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 10px;
+    flex-shrink: 0;
+}
+
+.robot p{
+    padding-left: 10px;
+    flex-grow: 1;
+}
+
+/* Robots de ficción */
+figcaption.center {
+    text-align: center;
+    font-size: 18px;
+}
